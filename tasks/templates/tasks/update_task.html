@@ -1,0 +1,67 @@
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<style>
+    body {
+        background-color: #638CB8;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+        color: #333;
+    }
+
+    /* Style form fields */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Customize Bootstrap button colors */
+    .btn-update {
+        background-color: #6BA3E8;
+        border-color: #6BA3E8;
+    }
+</style>
+
+<div class="container form-container">
+    <h3>Update Task</h3>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <div class="form-group">
+            {% comment %} <label for="{{ form.field_name.id_for_label }}">Field Label:</label> {% endcomment %}
+            {{ form }}
+        </div>
+
+        <!-- Add more form fields as needed -->
+
+        <input type="submit" class="btn btn-update" value="Update Task">
+    </form>
+</div>
+
+<!-- Include Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
